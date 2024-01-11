@@ -2679,7 +2679,8 @@ html{
 
 /* Slider */
 .scroller {
-  max-width: 600px;
+  max-width: 2000px;
+  margin: auto;
 }
 
 .scroller__inner {
