@@ -2755,6 +2755,19 @@ html{
 }
 
 /* for testing purposed to ensure the animation lined up correctly */
-.test {
-  background: red !important;
+.filterDiv {
+  display: none;
+  width: 95% !important;
+}
+
+.show {
+  display: block;
+}
+
+.btn:hover {
+  color: #79808A;;
+}
+
+.btn.active {
+  color: #79808A;
 }

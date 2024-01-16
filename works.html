@@ -15,18 +15,23 @@
    <body class="sj">
       <header class="header d f g yb">
          <div class="hb yb md lf tn un fo tp 2xl:ud-px-20">
-            <!-- <div class="e aa ic jn sp"> -->
+            <div class="e aa ic sp">
                <a href="index.html" class="gb">
                 <img src="/src/images/logo/Logo.png" alt="">
                <!-- <img src="src/images/logo/logo-dark.svg" alt="logo" class="jb kb hj" /> -->
                <!-- <img src="src/images/logo/logo-light.svg" alt="logo" class="kb ij" /> -->
                </a>
-            <!-- </div> -->
+            </div>
             <div class="menu-wrapper c f g ba lb yb pd re kf sj vm xm gn in vn co eo gp mp">
                <div class="yb zd">
                   <nav>
                      <ul class="navbar hb ld od pd sd kh sn xn yn">
-                        <li style="text-decoration: underline;">
+                        <li>
+                           <a href="/" class="menu-scroll ib od pd kh lh mh bi _i ek">
+                           Home
+                           </a>
+                        </li>
+                        <li>
                            <a href="/works.html" class="menu-scroll active ib od pd kh lh mh bi _i ek">
                            Works
                            </a>
@@ -72,11 +77,11 @@
                      </h1>
                   </div>
                </div>
-               <div data-wow-delay=".3s" style="color: white; display: flex; flex-direction: column;">
-                  <p>All</p>
-                  <p>Digital Products</p>
-                  <p>Websites</p>
-                  <p>Motion Design</p>
+               <div data-wow-delay=".3s" style="color: white; display: flex; flex-direction: column; font-size: 23px;">
+                  <p style="cursor: pointer;" class="btn active" onclick="filterSelection('all')">.All</p>
+                  <p style="cursor: pointer;" class="btn" onclick="filterSelection('digital-products')">.Digital Products</p>
+                  <p style="cursor: pointer;" class="btn" onclick="filterSelection('websites')">.Websites</p>
+                  <p style="cursor: pointer;" class="btn" onclick="filterSelection('motion-designs')">.Motion Design</p>
                </div>
             </div>
          </div>
@@ -118,18 +123,19 @@
             </svg>
          </div>
       </section>
-      <section id="blog" class="qg">
+      <section id="blog" style="margin-top: 5rem;">
          <div class="of op">
             <div class="yb ie gg jj">
-               <div class="ja hb md">
-                  <div class="yb of yl/2 pn/3">
+               <div style="display: grid; grid-template-columns: repeat(2, 1fr);">
+               <!-- <div class="ja hb md"> -->
+                  <div class="yb of yl/2 pn/3 filterDiv motion-designs">
                      <div class="wow fadeInUp pa" data-wow-delay=".2s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
                            <img src="src/images/blog/image-1.jpg" alt="blog-image" class="yb" />
                            </a>
                            <span class="d p q de se vf of lh ph xh ci">
-                           Online Business
+                           Motion Design
                            </span>
                         </div>
                         <div>
@@ -159,14 +165,14 @@
                         </div>
                      </div>
                   </div>
-                  <div class="yb of yl/2 pn/3">
+                  <div class="yb of yl/2 pn/3 filterDiv digital-products">
                      <div class="wow fadeInUp pa" data-wow-delay=".3s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
                            <img src="src/images/blog/image-2.jpg" alt="blog-image" class="yb" />
                            </a>
                            <span class="d p q de se vf of lh ph xh ci">
-                           Ui/Ux Design
+                           Digital Products
                            </span>
                         </div>
                         <div>
@@ -196,7 +202,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="yb of yl/2 pn/3">
+                  <div class="yb of yl/2 pn/3 filterDiv websites">
                      <div class="wow fadeInUp pa" data-wow-delay=".4s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
@@ -233,14 +239,14 @@
                         </div>
                      </div>
                   </div>
-                  <div class="yb of yl/2 pn/3">
+                  <div class="yb of yl/2 pn/3 filterDiv motion-designs">
                      <div class="wow fadeInUp pa" data-wow-delay=".2s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
                            <img src="src/images/blog/image-1.jpg" alt="blog-image" class="yb" />
                            </a>
                            <span class="d p q de se vf of lh ph xh ci">
-                           Online Business
+                           Motion Design
                            </span>
                         </div>
                         <div>
@@ -270,14 +276,14 @@
                         </div>
                      </div>
                   </div>
-                  <div class="yb of yl/2 pn/3">
+                  <div class="yb of yl/2 pn/3 filterDiv digital-products">
                      <div class="wow fadeInUp pa" data-wow-delay=".3s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
                            <img src="src/images/blog/image-2.jpg" alt="blog-image" class="yb" />
                            </a>
                            <span class="d p q de se vf of lh ph xh ci">
-                           Ui/Ux Design
+                           Digital Products
                            </span>
                         </div>
                         <div>
@@ -307,7 +313,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="yb of yl/2 pn/3">
+                  <div class="yb of yl/2 pn/3 filterDiv websites">
                      <div class="wow fadeInUp pa" data-wow-delay=".4s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
@@ -344,14 +350,14 @@
                         </div>
                      </div>
                   </div>
-                  <div class="yb of yl/2 pn/3">
+                  <div class="yb of yl/2 pn/3 filterDiv motion-designs">
                      <div class="wow fadeInUp pa" data-wow-delay=".2s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
                            <img src="src/images/blog/image-1.jpg" alt="blog-image" class="yb" />
                            </a>
                            <span class="d p q de se vf of lh ph xh ci">
-                           Online Business
+                           Motion Design
                            </span>
                         </div>
                         <div>
@@ -381,14 +387,14 @@
                         </div>
                      </div>
                   </div>
-                  <div class="yb of yl/2 pn/3">
+                  <div class="yb of yl/2 pn/3 filterDiv digital-products">
                      <div class="wow fadeInUp pa" data-wow-delay=".3s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
                            <img src="src/images/blog/image-2.jpg" alt="blog-image" class="yb" />
                            </a>
                            <span class="d p q de se vf of lh ph xh ci">
-                           Ui/Ux Design
+                           Digital Products
                            </span>
                         </div>
                         <div>
@@ -418,7 +424,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="yb of yl/2 pn/3">
+                  <div class="yb of yl/2 pn/3 filterDiv websites">
                      <div class="wow fadeInUp pa" data-wow-delay=".4s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
@@ -455,14 +461,14 @@
                         </div>
                      </div>
                   </div>
-                  <div class="yb of yl/2 pn/3">
+                  <div class="yb of yl/2 pn/3 filterDiv motion-designs">
                      <div class="wow fadeInUp pa" data-wow-delay=".2s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
                            <img src="src/images/blog/image-1.jpg" alt="blog-image" class="yb" />
                            </a>
                            <span class="d p q de se vf of lh ph xh ci">
-                           Online Business
+                           Motion Design
                            </span>
                         </div>
                         <div>
@@ -492,14 +498,14 @@
                         </div>
                      </div>
                   </div>
-                  <div class="yb of yl/2 pn/3">
+                  <div class="yb of yl/2 pn/3  filterDiv digital-products">
                      <div class="wow fadeInUp pa" data-wow-delay=".3s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
                            <img src="src/images/blog/image-2.jpg" alt="blog-image" class="yb" />
                            </a>
                            <span class="d p q de se vf of lh ph xh ci">
-                           Ui/Ux Design
+                           Digital Products
                            </span>
                         </div>
                         <div>
@@ -529,7 +535,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="yb of yl/2 pn/3">
+                  <div class="yb of yl/2 pn/3 filterDiv websites">
                      <div class="wow fadeInUp pa" data-wow-delay=".4s">
                         <div class="e na _d de">
                            <a href="javascript:void(0)" class="fb">
@@ -567,48 +573,6 @@
                      </div>
                   </div>
                </div>
-               <!-- <div class="wow fadeInUp hb od pd tg" data-wow-delay=".2s">
-                  <ul class="la hb od kk">
-                     <li class="wf sk">
-                        <a href="javascript:void(0)" class="hb mb od pd de we xf yf mh xh ci xi nk tk">
-                           <span>
-                              <svg width="8" height="15" viewBox="0 0 8 15" class="if jf">
-                                 <path d="M7.12979 1.91389L7.1299 1.914L7.1344 1.90875C7.31476 1.69833 7.31528 1.36878 7.1047 1.15819C7.01062 1.06412 6.86296 1.00488 6.73613 1.00488C6.57736 1.00488 6.4537 1.07206 6.34569 1.18007L6.34564 1.18001L6.34229 1.18358L0.830207 7.06752C0.830152 7.06757 0.830098 7.06763 0.830043 7.06769C0.402311 7.52078 0.406126 8.26524 0.827473 8.73615L0.827439 8.73618L0.829982 8.73889L6.34248 14.6014L6.34243 14.6014L6.34569 14.6047C6.546 14.805 6.88221 14.8491 7.1047 14.6266C7.30447 14.4268 7.34883 14.0918 7.12833 13.8693L1.62078 8.01209C1.55579 7.93114 1.56859 7.82519 1.61408 7.7797L1.61413 7.77975L1.61729 7.77639L7.12979 1.91389Z" stroke-width="0.3" />
-                              </svg>
-                           </span>
-                        </a>
-                     </li>
-                     <li class="wf sk">
-                        <a href="javascript:void(0)" class="hb mb od pd de we xf yf mh xh ci xi nk tk">
-                        1
-                        </a>
-                     </li>
-                     <li class="wf sk">
-                        <a href="javascript:void(0)" class="hb mb od pd de we xf yf mh xh ci xi nk tk">
-                        2
-                        </a>
-                     </li>
-                     <li class="wf sk">
-                        <a href="javascript:void(0)" class="hb mb od pd de we xf yf mh xh ci xi nk tk">
-                        3
-                        </a>
-                     </li>
-                     <li class="wf sk">
-                        <a href="javascript:void(0)" class="hb mb od pd de we xf yf mh xh ci xi nk tk">
-                        4
-                        </a>
-                     </li>
-                     <li class="wf sk">
-                        <a href="javascript:void(0)" class="hb mb od pd de we xf yf mh xh ci xi nk tk">
-                           <span>
-                              <svg width="8" height="15" viewBox="0 0 8 15" class="if jf">
-                                 <path d="M0.870212 13.0861L0.870097 13.086L0.865602 13.0912C0.685237 13.3017 0.684716 13.6312 0.895299 13.8418C0.989374 13.9359 1.13704 13.9951 1.26387 13.9951C1.42264 13.9951 1.5463 13.9279 1.65431 13.8199L1.65436 13.82L1.65771 13.8164L7.16979 7.93248C7.16985 7.93243 7.1699 7.93237 7.16996 7.93231C7.59769 7.47923 7.59387 6.73477 7.17253 6.26385L7.17256 6.26382L7.17002 6.26111L1.65752 0.398611L1.65757 0.398563L1.65431 0.395299C1.454 0.194997 1.11779 0.150934 0.895299 0.373424C0.695526 0.573197 0.651169 0.908167 0.871667 1.13067L6.37922 6.98791C6.4442 7.06886 6.43141 7.17481 6.38592 7.2203L6.38587 7.22025L6.38271 7.22361L0.870212 13.0861Z" stroke-width="0.3" />
-                              </svg>
-                           </span>
-                        </a>
-                     </li>
-                  </ul>
-               </div> -->
             </div>
          </div>
       </section>
@@ -729,6 +693,51 @@
             </div>
          </div>
       </section>
+<script>
+   filterSelection("all")
+   function filterSelection(c) {
+     var x, i;
+     x = document.getElementsByClassName("filterDiv");
+     console.log(x);
+     if (c == "all") c = "";
+     for (i = 0; i < x.length; i++) {
+       w3RemoveClass(x[i], "show");
+       if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+     }
+   }
+   
+   function w3AddClass(element, name) {
+     var i, arr1, arr2;
+     arr1 = element.className.split(" ");
+     arr2 = name.split(" ");
+     for (i = 0; i < arr2.length; i++) {
+       if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+     }
+   }
+   
+   function w3RemoveClass(element, name) {
+     var i, arr1, arr2;
+     arr1 = element.className.split(" ");
+     arr2 = name.split(" ");
+     for (i = 0; i < arr2.length; i++) {
+       while (arr1.indexOf(arr2[i]) > -1) {
+         arr1.splice(arr1.indexOf(arr2[i]), 1);     
+       }
+     }
+     element.className = arr1.join(" ");
+   }
+   
+   // Add active class to the current button (highlight it)
+   var btnContainer = document.getElementById("myBtnContainer");
+   var btns = btnContainer.getElementsByClassName("btn");
+   for (var i = 0; i < btns.length; i++) {
+     btns[i].addEventListener("click", function(){
+       var current = document.getElementsByClassName("active");
+       current[0].className = current[0].className.replace(" active", "");
+       this.className += " active";
+     });
+   }
+   </script>
 
       <footer class="wow fadeInUp ig zk oo" data-wow-delay=".2s">
          <div class="of op">
@@ -800,6 +809,7 @@
       <span class="ua qb dc hd ke je me"></span>
       </a>
       <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script defer src="bundle.js"></script><script>(function(){var js = "window['__CF$cv$params']={r:'8404677a4c935c49',t:'MTcwNDM4MDk4My45MTkwMDA='};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='cdn-cgi/challenge-platform/h/g/scripts/jsd/74bd6362/main.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v84a3a4012de94ce1a686ba8c167c359c1696973893317" integrity="sha512-euoFGowhlaLqXsPWQ48qSkBSCFs3DPRyiwVu3FjR96cMPx+Fr+gpWRhIafcHwqwCqWS42RZhIudOvEI+Ckf6MA==" data-cf-beacon='{"rayId":"8404677a4c935c49","version":"2023.10.0","r":1,"token":"9a6015d415bb4773a0bff22543062d3b","b":1}' crossorigin="anonymous"></script>
+   
    </body>
    <!-- Mirrored from go-tailwind.preview.uideck.com/blog-grids by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 04 Jan 2024 15:09:58 GMT -->
 </html>
