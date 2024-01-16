@@ -2760,6 +2760,10 @@ html{
   width: 95% !important;
 }
 
+.btn{
+  cursor: pointer;
+}
+
 .show {
   display: block;
 }
