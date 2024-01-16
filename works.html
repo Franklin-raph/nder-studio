@@ -78,7 +78,7 @@
                   </div>
                </div>
                <div data-wow-delay=".3s" style="color: white; display: flex; flex-direction: column; font-size: 23px;" id="myBtnContainer">
-                  <p class="btn active" onclick="filterSelection('all')">All</p>
+                  <p class="btn active-item" onclick="filterSelection('all')">All</p>
                   <p class="btn" onclick="filterSelection('digital-products')">Digital Products</p>
                   <p class="btn" onclick="filterSelection('websites')">Websites</p>
                   <p class="btn" onclick="filterSelection('motion-designs')">Motion Design</p>
@@ -802,10 +802,10 @@
             console.log(btns);
             for (var i = 0; i < btns.length; i++) {
             btns[i].addEventListener("click", function(){
-               var current = document.getElementsByClassName("active");
+               var current = document.getElementsByClassName("active-item");
                console.log(current);
-               current[0].className = current[0].className.replace(" active", "");
-               this.className += " active";
+               current[0].className = current[0].className.replace(" active-item", "");
+               this.className += " active-item";
             });
          }
       </script>
