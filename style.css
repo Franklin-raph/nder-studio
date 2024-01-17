@@ -10,7 +10,7 @@
 /*!*****************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/css/animate.css ***!
   \*****************************************************************************************************************/
-@charset "UTF-8";
+/* @charset "UTF-8"; */
 
 /*!
  * animate.css -https://daneden.github.io/animate.css/
@@ -171,6 +171,7 @@
   border-style: solid; /* 2 */
   border-color: currentColor; /* 2 */
   font-family: "Poppins" !important;
+  /* overflow-x: hidden; */
 }
 
 ::before,
@@ -2774,4 +2775,19 @@ html{
 
 .btn.active-item {
   color: #79808A;
+}
+
+.services_list li p{
+  font-weight: bold;
+  margin: 1rem 0;
+  font-size: 22px;
+}
+
+.services_list {
+  list-style-type: circle;
+  margin-left: 2rem;
+}
+
+.services_list li::marker {
+  color: white;
 }
