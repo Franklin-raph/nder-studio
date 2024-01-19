@@ -24,3 +24,17 @@ function addAnimation() {
     });
   });
 }
+
+
+async function contactUs(){
+  console.log("Contact form");
+  const res = await fetch(`https://nder-agency.onrender.com/api/v1/create-user`,{
+    method:"POST",
+    headers: {
+      "Content-Type":"application/json"
+    },
+    body: JSON.stringify({name:"Frank", email:"frank@gamil.com", phone:"080111"})
+  })
+  const data = res.json()
+  console.log(res, data);
+}
