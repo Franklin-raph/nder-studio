@@ -43,7 +43,7 @@ async function contactUs(){
     return
   }
 
-  console.log(name, phone, email, subject, message);
+  console.log(JSON.stringify({name:name, email:email, phone:phone, subject:subject, message:message}));
 
   loadingBtn.style.display = "block"
   msgBtn.style.display = "none"
@@ -53,7 +53,7 @@ async function contactUs(){
     headers: {
       "Content-Type":"application/json"
     },
-    body: JSON.stringify({name, email, phone})
+    body: JSON.stringify({name:name, email:email, phone:phone, subject:subject, message:message})
   })
   const data = await res.json()
 
