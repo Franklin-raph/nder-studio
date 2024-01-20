@@ -43,7 +43,7 @@ async function contactUs(){
     return
   }
 
-  console.log(JSON.stringify({name:name, email:email, phone:phone, subject:subject, message:message}));
+  console.log({name:name, email:email, phone:phone, subject:subject, message:message});
 
   loadingBtn.style.display = "block"
   msgBtn.style.display = "none"
@@ -74,6 +74,12 @@ async function contactUs(){
       text: `We have received your message, we would get back to you in the next 24 hours. Thank you and have a wonderful day.😊`,
       icon: "success"
     });
+    document.querySelector("#name").value = ""
+    document.querySelector("#phone").value = ""
+    document.querySelector("#email").value = ""
+    document.querySelector("#subject").value = ""
+    document.querySelector("#message").value = ""
+    document.querySelector("#supportCheckbox").checked = false
   }
   console.log(res, data);
 }
