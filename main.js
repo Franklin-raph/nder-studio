@@ -27,14 +27,53 @@ function addAnimation() {
 
 
 async function contactUs(){
-  console.log("Contact form");
+  const name = document.querySelector("#name").value
+  const phone = document.querySelector("#phone").value
+  const email = document.querySelector("#email").value
+  const subject = document.querySelector("#subject").value
+  const message = document.querySelector("#message").value
+  const loadingBtn = document.querySelector("#loadingBtn")
+  const msgBtn = document.querySelector("#msgBtn")
+
+  if(!document.querySelector("#supportCheckbox").checked){
+    Swal.fire({
+      icon: "error",
+      text: "Please agree to our terms and support",
+    });
+    return
+  }
+
+  console.log(name, phone, email, subject, message);
+
+  loadingBtn.style.display = "block"
+  msgBtn.style.display = "none"
+
   const res = await fetch(`https://nder-agency.onrender.com/api/v1/create-user`,{
     method:"POST",
     headers: {
       "Content-Type":"application/json"
     },
-    body: JSON.stringify({name:"Frank", email:"frank@gamil.com", phone:"080111"})
+    body: JSON.stringify({name, email, phone})
   })
-  const data = res.json()
+  const data = await res.json()
+
+  if(res){
+    loadingBtn.style.display = "none"
+    msgBtn.style.display = "block"
+  }
+
+  if(!res.ok){
+    Swal.fire({
+      icon: "error",
+      text: data.msg,
+    });
+  }
+
+  if(res.ok){
+    Swal.fire({
+      text: `We have received your message, we would get back to you in the next 24 hours. Thank you and have a wonderful day.😊`,
+      icon: "success"
+    });
+  }
   console.log(res, data);
 }

@@ -2791,3 +2791,7 @@ html{
 .services_list li::marker {
   color: white;
 }
+
+#loadingBtn{
+  display: none;
+}
