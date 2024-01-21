@@ -35,13 +35,13 @@ async function contactUs(){
   const loadingBtn = document.querySelector("#loadingBtn")
   const msgBtn = document.querySelector("#msgBtn")
 
-  if(!document.querySelector("#supportCheckbox").checked){
-    Swal.fire({
-      icon: "error",
-      text: "Please agree to our terms and support",
-    });
-    return
-  }
+  // if(!document.querySelector("#supportCheckbox").checked){
+  //   Swal.fire({
+  //     icon: "error",
+  //     text: "Please agree to our terms and support",
+  //   });
+  //   return
+  // }
 
   console.log({name:name, email:email, phone:phone, subject:subject, message:message});
 
@@ -79,7 +79,6 @@ async function contactUs(){
     document.querySelector("#email").value = ""
     document.querySelector("#subject").value = ""
     document.querySelector("#message").value = ""
-    document.querySelector("#supportCheckbox").checked = false
   }
   console.log(res, data);
 }
