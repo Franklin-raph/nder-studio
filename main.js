@@ -44,41 +44,48 @@ async function contactUs(){
   // }
 
   console.log({name:name, email:email, phone:phone, subject:subject, message:message});
-
-  loadingBtn.style.display = "block"
-  msgBtn.style.display = "none"
-
-  const res = await fetch(`https://nder-agency.onrender.com/api/v1/create-user`,{
-    method:"POST",
-    headers: {
-      "Content-Type":"application/json"
-    },
-    body: JSON.stringify({name:name, email:email, phone:phone, subject:subject, message:message})
-  })
-  const data = await res.json()
-
-  if(res){
-    loadingBtn.style.display = "none"
-    msgBtn.style.display = "block"
-  }
-
-  if(!res.ok){
+  if(name === "" || email === "" || phone === "" || subject === "" || message === ""){
     Swal.fire({
-      icon: "error",
-      text: data.msg,
+      text: `Please fill in the fields`,
+      icon: "error"
     });
+  }else{
+      loadingBtn.style.display = "block"
+      msgBtn.style.display = "none"
+    
+      const res = await fetch(`https://nder-agency.onrender.com/api/v1/create-user`,{
+        method:"POST",
+        headers: {
+          "Content-Type":"application/json"
+        },
+        body: JSON.stringify({name:name, email:email, phone:phone, subject:subject, message:message})
+      })
+      const data = await res.json()
+    
+      if(res){
+        loadingBtn.style.display = "none"
+        msgBtn.style.display = "block"
+      }
+    
+      if(!res.ok){
+        Swal.fire({
+          icon: "error",
+          text: data.msg,
+        });
+      }
+    
+      if(res.ok){
+        Swal.fire({
+          text: `We have received your message, we would get back to you in the next 24 hours. Thank you and have a wonderful day.😊`,
+          icon: "success"
+        });
+        document.querySelector("#name").value = ""
+        document.querySelector("#phone").value = ""
+        document.querySelector("#email").value = ""
+        document.querySelector("#subject").value = ""
+        document.querySelector("#message").value = ""
+      }
+      console.log(res, data);
   }
 
-  if(res.ok){
-    Swal.fire({
-      text: `We have received your message, we would get back to you in the next 24 hours. Thank you and have a wonderful day.😊`,
-      icon: "success"
-    });
-    document.querySelector("#name").value = ""
-    document.querySelector("#phone").value = ""
-    document.querySelector("#email").value = ""
-    document.querySelector("#subject").value = ""
-    document.querySelector("#message").value = ""
-  }
-  console.log(res, data);
 }

@@ -82,8 +82,8 @@
                      <p class="wow fadeInUp wa mh bi" data-wow-delay=".4s">
                         Nders Studio serves as a strategic partner for companies or individuals seeking a scalable MVP or Product. We specialize in UI/UX Design, Mobile App & Website development, Motion design, and Video Editing.                     </p>
                      <div class="wow fadeInUp hb md od pd vn" data-wow-delay=".5s">
-                        <a href="#features" class="ib od de se zf nf lh mh ci yi em fm">
-                           Starte a project
+                        <a href="/contact.html" class="ib od de se zf nf lh mh ci yi em fm">
+                           Start a project
                            <span class="dg">
                               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                  <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" fill="white" />
@@ -581,18 +581,18 @@
             </div>
          </div>
       </section>
-      <section id="testimonial" class="ig zk oo">
+      <!-- <section id="testimonial" class="ig zk oo">
          <div class="of op">
             <div class="wow fadeInUp e ia wa hg kh ml ro" data-wow-delay=".2s">
                <span class="title"> Testimonial </span>
                <h2 class="ia oa yc lh oh wh di _j dl qm um">
                   What Our Clients Say About Us
                </h2>
-               <!-- <p class="ia sc mh bi">
+               <!- <p class="ia sc mh bi">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
                   convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam
                   ante in maximus.
-               </p> -->
+               </p> ->
             </div>
             <div class="yb of">
                <div class="wow fadeInUp e da _d de ff gf _f dh eh pi bk vk cm km xo" data-wow-delay=".3s">
@@ -692,7 +692,7 @@
                </div>
             </div>
          </div>
-      </section>
+      </section> -->
       <section class="ig zk yo">
          <div class="of op">
             <div class="wow fadeInUp e ia cb sc kh" data-wow-delay=".2s">
@@ -803,7 +803,7 @@
       <section id="support" class="#">
          <div class="of op">
             <div class="ia ad mg">
-               <form class="wow fadeInUp" data-wow-delay=".2s" action="https://formbold.com/s/unique_form_id" method="POST">
+               <div class="wow fadeInUp" data-wow-delay=".2s">
                   <div class="ja hb md">
                      <div class="yb of ok/2">
                         <div class="wa">
@@ -845,7 +845,7 @@
                            <textarea rows="4" name="message" id="message" placeholder="Type Message" class="yb kd ie ve tf mh xh di ii oi aj mj _j gk"></textarea>
                         </div>
                      </div>
-                     <div class="yb of">
+                   <!--  <div class="yb of">
                         <div class="wa">
                            <label for="supportCheckbox" class="hb id jd bi _i">
                               <div class="e">
@@ -862,14 +862,17 @@
                               Policy
                            </label>
                         </div>
-                     </div>
+                     </div> -->
                      <div class="yb of">
-                        <button class="hb yb od pd de se pf qf lh mh ci yi">
+                        <button class="hb yb od pd de se pf qf lh mh ci yi" onclick="contactUs()" id="msgBtn">
                         Send Message
                         </button>
+                        <button class="hb yb od pd de se pf qf lh mh ci yi" id="loadingBtn" disabled>
+                         Loading...
+                         </button>
                      </div>
                   </div>
-               </form>
+               </div>
             </div>
          </div>
       </section>
@@ -908,7 +911,7 @@
                   </div>
                   <div class="yb of pn/3">
                      <div class="kh ap">
-                        <a href="javascript:void(0)" class="ib od de se pf qf lh mh ci yi">
+                        <a href="/contact.html" target="_blank" class="ib od de se pf qf lh mh ci yi">
                         Get Started Now
                         </a>
                      </div>
@@ -926,9 +929,9 @@
                      <h3 class="sa lh qh xh di _j">
                       Email Address
                     </h3>
-                    <a href="mailto:">
+                    <a href="mailto:support@ndersstudio.com">
                       <p class="pa mh bi">
-                        info@ndersstudio.com
+                        support@ndersstudio.com
                       </p>
                      </a>
                   </div>
@@ -939,7 +942,7 @@
                       Phone Number
                      </h3>
                      <p class="pa mh bi">
-                     +49 1521 9727374
+                        <a target="_blank" href="https://wa.me/4915219727374">+49 1521 9727374</a>
                      </p>
                   </div>
                </div>
@@ -987,6 +990,7 @@
       <a href="javascript:void(0)" class="kq back-to-top c l m n ca jb pb cc od pd fe se ci ni ti">
       <span class="ua qb dc hd ke je me"></span>
       </a>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
       <script data-cfasync="false" src="cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
       <script>
          // section menu active
