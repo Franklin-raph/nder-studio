@@ -2795,3 +2795,13 @@ html{
 #loadingBtn{
   display: none;
 }
+
+@media screen and (max-width: 992px) {
+  .service-top-space{
+    margin-top: 8rem;
+  }
+
+  .testimonial-item{
+    margin-top: 4rem !important;
+  }
+}
